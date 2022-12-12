@@ -61,7 +61,7 @@ exports.update = async (req,res) =>{
     .then(result =>{
             res.json({
                 statuscode: 200,
-                data: result
+                message : "succesfully update"
             })
         })
     .catch(error =>{
@@ -77,9 +77,9 @@ exports.deleteAuthors = async (req,res) =>{
     }
     author.destroy({where: param})
         .then(result => {
-            res.json({
-                message: "data has been deleted",
-                data: result
+            res.json({           
+                statuscode: 200,
+                message:"data has been deleted"
             })
         })
         .catch(error => {

@@ -81,9 +81,9 @@ exports.deletebooks = async (req,res) =>{
     }
     book.destroy({where: param})
         .then(result => {
-            res.json({
-                message: "data has been deleted",
-                data: result
+            res.json({   
+                statuscode: 200,
+                message:"data has been deleted"
             })
         })
         .catch(error => {
